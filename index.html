@@ -3,144 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>にしむら整骨院</title>
+<title>apricot gym</title>
 
 <style>
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   font-family: sans-serif;
-  background: #111;
+  background: linear-gradient(to bottom, #111, #ffcc00);
   color: #fff;
 }
 
-header {
-  background: #000;
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.hero {
-  background: linear-gradient(to bottom, #000, #ffcc00);
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 30px;
-}
-
-section {
-  padding: 50px 20px;
-}
-
-h2 {
-  color: #ffcc00;
-}
-
-.box {
-  background: #222;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-}
-
-.btn {
+/* 画像・動画のレスポンシブ対応 */
+img, video {
+  width: 100%;
+  height: auto;
   display: block;
-  background: #ffcc00;
-  color: #000;
-  padding: 18px;
+}
+
+/* セクション */
+section {
+  padding: 60px 20px;
   text-align: center;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+  color: #000;
+}
+
+/* カード */
+.card {
+  background: rgba(0,0,0,0.7);
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 300px;
   border-radius: 10px;
-  text-decoration: none;
+}
+
+/* LINEボタン（左） */
+.line-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #00c300;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
   font-weight: bold;
-  margin-top: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  animation: bounce 1.5s infinite;
+}
+
+/* 電話ボタン（右） */
+.tel-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff3b3b;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  animation: bounce 1.5s infinite;
+}
+
+/* 画像内電話タップ */
+.tel-wrap {
+  position: relative;
+}
+
+.tel-btn {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 60px;
+}
+
+/* アニメーション */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* 見出し */
+.gold {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* 🔥 500円強調 */
+.price {
+  font-size: 38px;
+  color: #ff3b3b;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255,0,0,0.6);
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-にしむら整骨院
-</header>
+<img src="./banner.gym.jpg" alt="バナー">
 
-<div class="hero">
-<h1>その痛み、もう我慢しないでください</h1>
-<p>根本改善×国家資格者の施術</p>
-<a href="#" class="btn">LINEで今すぐ予約</a>
+<div class="video-container">
+  <video 
+    src="mv.mp4" 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    controlslist="nodownload">
+  </video>
 </div>
 
-<section>
-<h2>こんなお悩みありませんか？</h2>
-<div class="box">✔ どこに行っても治らない腰痛</div>
-<div class="box">✔ 慢性的な肩こり・頭痛</div>
-<div class="box">✔ 交通事故後のむち打ち</div>
-<div class="box">✔ 痛み止めでごまかしている</div>
+<section class="cta">
+ <h1 style="font-size:40px; margin:0;">
+熊本で本気で変わりたいあなたへ
+</h1>
+
+<p class="price">
+「初回体験500円」
+</p>
+
+<p>
+「初心者OK」「食事サポート付き」「完全サポート」
+</p>
 </section>
 
+<a href="https://lin.ee/tLpiKUi" style="
+display:block;
+background:#ffcc00;
+color:#000;
+padding:15px;
+text-align:center;
+font-size:20px;
+border-radius:10px;
+margin:20px;
+text-decoration:none;
+font-weight:bold;
+">
+今すぐLINEで体験予約する
+</a>
+
+<p style="font-size:14px; color:#ccc; text-align:center;">
+※無理な勧誘は一切ありません<br>
+※運動初心者の方がほとんどです
+</p>
+
+<img src="./gaikan.jpg">
+
 <section>
-<h2>その原因、実は…</h2>
-<div class="box">
-痛みの原因は「筋肉・骨格の歪み」です。  
-表面的なマッサージだけでは改善しません。
+  <h2>✨理想の身体を手に入れる✨</h2>
+  <p class="gold">本気で変わりたいあなたへ</p>
+</section>
+
+<img src="./S__71884805_0.jpg">
+
+<img src="./gym.k.jpg">
+
+<a href="https://lin.ee/tLpiKUi" style="
+display:block;
+background:#ffcc00;
+color:#000;
+padding:15px;
+text-align:center;
+font-size:20px;
+border-radius:10px;
+margin:20px;
+text-decoration:none;
+font-weight:bold;
+">
+今すぐLINEで体験予約する
+</a>
+
+<section>
+  <h2>【選ばれる理由】</h2>
+
+  <div class="card">💪知識豊富なプロからの指導</div>
+  <div class="card">🍖食事サポートあり</div>
+  <div class="card">🏋️大会入賞者在籍</div>
+</section>
+
+<img src="./3.jpg">
+<img src="./2.jpg">
+
+<section>
+  <h2>⭐️500円体験（30分）⭐️</h2>
+</section>
+
+<img src="./gym.500yen.jpg">
+<img src="./images.gym.jpeg">
+
+<a href="https://lin.ee/tLpiKUi" style="
+display:block;
+background:#ffcc00;
+color:#000;
+padding:15px;
+text-align:center;
+font-size:20px;
+border-radius:10px;
+margin:20px;
+text-decoration:none;
+font-weight:bold;
+">
+今すぐLINEで体験予約する
+</a>
+
+<div class="tel-wrap">
+  <img src="./lp.gym.jpg">
+  <a href="tel:09023559371" class="tel-btn"></a>
 </div>
-</section>
 
-<section>
-<h2>にしむら整骨院の施術</h2>
-<div class="box">
-国家資格者が検査→分析→施術まで一貫対応  
-あなた専用のプログラムで改善を目指します
-</div>
-</section>
+<a href="tel:09023559371" class="tel-fixed">
+  📞 電話する
+</a>
 
-<section>
-<h2>他院との違い</h2>
-<div class="box">流れ作業ではなく完全個別対応</div>
-<div class="box">その場しのぎではなく根本改善</div>
-<div class="box">再発しない体作りまでサポート</div>
-</section>
-
-<section>
-<h2>対応症状</h2>
-<div class="box">腰痛 / 肩こり / 頭痛</div>
-<div class="box">ぎっくり腰 / 膝痛</div>
-<div class="box">交通事故治療 / むち打ち</div>
-</section>
-
-<section>
-<h2>施術の流れ</h2>
-<div class="box">① カウンセリング</div>
-<div class="box">② 検査・原因分析</div>
-<div class="box">③ 施術</div>
-<div class="box">④ アフターケア指導</div>
-</section>
-
-<section>
-<h2>料金</h2>
-<div class="box">
-保険施術：負担割合による  
-自費施術：3,300円〜
-</div>
-</section>
-
-<section>
-<h2>よくある質問</h2>
-<div class="box">Q. 初めてでも大丈夫？ → はい大丈夫です</div>
-<div class="box">Q. 予約は必要？ → 予約優先です</div>
-</section>
-
-<section>
-<h2>アクセス</h2>
-<div class="box">
-熊本市南区御幸笛田  
-駐車場あり
-</div>
-
-<a href="#" class="btn">今すぐ予約する</a>
-</section>
+<a href="https://lin.ee/tLpiKUi" class="line-btn">
+  LINE予約
+</a>
 
 </body>
 </html>
