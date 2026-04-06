@@ -17,15 +17,25 @@ header {
   background: #000;
   color: #fff;
   padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h2 {
+header h1 {
   margin: 0;
   font-size: 18px;
 }
 
+/* インスタアイコン */
+.insta-header {
+  width: 28px;
+}
+
+/* ナビ */
 nav {
   margin-top: 5px;
+  width: 100%;
 }
 
 nav a {
@@ -102,17 +112,9 @@ nav a {
 }
 
 /* 個別カラー */
-.hoken {
-  background: #007bff;
-}
-
-.jihi {
-  background: #ff6600;
-}
-
-.jiko {
-  background: #e60023;
-}
+.hoken { background: #007bff; }
+.jihi { background: #ff6600; }
+.jiko { background: #e60023; }
 
 .menu-btn p {
   margin: 5px 0 0;
@@ -135,7 +137,7 @@ img {
   margin-top: 10px;
 }
 
-/* ボタン */
+/* CTA */
 .cta {
   background: #ff6600;
   color: #fff;
@@ -200,6 +202,16 @@ footer {
   text-decoration: none;
 }
 
+/* 固定Instagram */
+.insta-fixed {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  background: #E1306C;
+  padding: 12px;
+  border-radius: 50%;
+}
+
 /* PC */
 @media(min-width:768px){
   .flex {
@@ -214,13 +226,17 @@ footer {
 
 <header>
   <h1>🏥にしむら整骨院🏥</h1>
-  <nav>
-    <a href="#about">👨‍⚕️院長紹介</a>
-    <a href="#menu">❤️‍🩹施術</a>
-    <a href="#access">🚕アクセス</a>
-    <a href="#faq">🙋Q&A</a>
-  </nav>
+  <a href="https://www.instagram.com/gym_seikotuin?igsh=MWFjY2JqYnJ4ZDRjMw%3D%3D&utm_source=qr">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="insta-header">
+  </a>
 </header>
+
+<nav style="background:#000; padding:5px 15px;">
+  <a href="#about">👨‍⚕️院長紹介</a>
+  <a href="#menu">❤️‍🩹施術</a>
+  <a href="#access">🚕アクセス</a>
+  <a href="#faq">🙋Q&A</a>
+</nav>
 
 <!-- トップ -->
 <section class="hero">
@@ -315,6 +331,10 @@ footer {
 </footer>
 
 <a href="https://lin.ee/xUmAtVC" class="line-fixed">LINE予約</a>
+
+<a href="https://www.instagram.com/gym_seikotuin?igsh=MWFjY2JqYnJ4ZDRjMw%3D%3D&utm_source=qr" class="insta-fixed">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="30">
+</a>
 
 <script>
 function toggle(el){
