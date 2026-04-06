@@ -77,6 +77,18 @@ nav a {
   border-radius: 10px;
 }
 
+/* クリック用 */
+.link-box {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.link-box:hover {
+  transform: scale(1.05);
+  background: #ffe0cc;
+}
+
 /* 画像 */
 img {
   width: 100%;
@@ -106,7 +118,7 @@ footer {
   font-size: 12px;
 }
 
-/* 固定LINEボタン */
+/* 固定LINE */
 .line-fixed {
   position: fixed;
   bottom: 20px;
@@ -119,7 +131,7 @@ footer {
   text-decoration: none;
 }
 
-/* PC対応 */
+/* PC */
 @media(min-width:768px){
   .flex {
     flex-direction: row;
@@ -174,9 +186,22 @@ footer {
 <section id="menu" class="section">
   <h2>施術メニュー</h2>
   <div class="flex">
-    <div class="box">保険施術</div>
-    <div class="box">自費施術</div>
-    <div class="box">交通事故治療</div>
+
+    <a href="hoken.html" class="box link-box">
+      <h3>保険施術</h3>
+      <p>各種保険対応・急なケガに</p>
+    </a>
+
+    <a href="jihiseitai.html" class="box link-box">
+      <h3>自費施術</h3>
+      <p>慢性的な痛み・根本改善</p>
+    </a>
+
+    <a href="https://yuzu2021.github.io/lp-seikotsu-jiko2/" class="box link-box">
+      <h3>交通事故治療</h3>
+      <p>むち打ち・自己負担0円</p>
+    </a>
+
   </div>
 </section>
 
