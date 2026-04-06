@@ -24,6 +24,17 @@ header h2 {
   font-size: 18px;
 }
 
+nav {
+  margin-top: 5px;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 /* トップ */
 .hero {
   background: url('img1.jpg') center/cover;
@@ -113,10 +124,18 @@ header h2 {
 .note {
   font-size: 12px;
   color: #666;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
-/* CTA */
+/* 画像 */
+img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* ボタン */
 .cta {
   background: #ff6600;
   color: #fff;
@@ -125,6 +144,40 @@ header h2 {
   margin-top: 15px;
   text-decoration: none;
   border-radius: 5px;
+}
+
+/* 地図 */
+.map iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Q&A */
+.faq {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #f5f5f5;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
 }
 
 /* フッター */
@@ -146,6 +199,14 @@ footer {
   border-radius: 50px;
   text-decoration: none;
 }
+
+/* PC */
+@media(min-width:768px){
+  .flex {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 </style>
 </head>
 
@@ -153,29 +214,41 @@ footer {
 
 <header>
   <h2>にしむら整骨院</h2>
+  <nav>
+    <a href="#about">当院</a>
+    <a href="#menu">施術</a>
+    <a href="#access">アクセス</a>
+    <a href="#faq">Q&A</a>
+  </nav>
 </header>
 
 <!-- トップ -->
 <section class="hero">
-  <h1>お身体の不調でお悩みの方へ</h1>
-  <a href="https://lin.ee/xUmAtVC" class="cta">LINEで相談・予約</a>
+  <h1>その痛み、我慢しないでください</h1>
+  <a href="https://lin.ee/xUmAtVC" class="cta">LINE予約する</a>
+</section>
+
+<!-- 当院 -->
+<section id="about" class="section">
+  <h2>当院について</h2>
+  <img src="intyo.jpg">
+  <p>一人ひとりに合わせた施術で根本改善を目指します。</p>
 </section>
 
 <!-- メニュー -->
-<section class="section">
+<section id="menu" class="section">
   <h2>施術メニュー</h2>
-
   <div class="flex">
 
     <a href="https://yuzu2021.github.io/hokensejyutu-ryoukin/" class="menu-btn hoken">
       <div class="label">よく選ばれています</div>
       <h3>保険施術</h3>
-      <p>各種保険に対応しています</p>
+      <p>各種保険対応</p>
     </a>
 
     <a href="https://yuzu2021.github.io/hokengaisejyutu-page/" class="menu-btn jihi">
       <h3>自費施術</h3>
-      <p>慢性的なお悩みに対応</p>
+      <p>慢性痛の改善</p>
     </a>
 
     <a href="https://yuzu2021.github.io/lp-seikotsu-jiko2/" class="menu-btn jiko">
@@ -186,10 +259,53 @@ footer {
   </div>
 
   <p class="note">
-  ※症状や状況により施術内容・費用は異なります。<br>
+  ※症状や施術内容により異なります。<br>
   ※交通事故治療は保険適用条件により自己負担が発生する場合があります。
   </p>
 
+</section>
+
+<!-- アクセス -->
+<section id="access" class="section">
+  <h2>アクセス</h2>
+  <p>熊本市南区御幸笛田4-4-75</p>
+
+  <a href="https://maps.app.goo.gl/C2bwAdXybJHKL8Ef6?g_st=ic">
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=熊本市南区御幸笛田4-4-75&output=embed"></iframe>
+    </div>
+  </a>
+
+  <p>マックスバリュから徒歩1分</p>
+</section>
+
+<!-- Q&A -->
+<section id="faq" class="section">
+  <h2>よくある質問</h2>
+
+  <div class="faq">
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-question">施術は痛くない？ <span>＋</span></div>
+      <div class="faq-answer">無理な施術は行いませんのでご安心ください。</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-question">どのくらい時間がかかる？ <span>＋</span></div>
+      <div class="faq-answer">初回は50〜60分ほどです。2回目以降は30〜40分お時間を頂いております。</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-question">予約は必要？ <span>＋</span></div>
+      <div class="faq-answer">予約無しでもOKですが、予約優先なのでLINE予約がおすすめです。</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-question">駐車場はある？ <span>＋</span></div>
+      <div class="faq-answer">駐車場６台完備しております。</div>
+    </div>
+
+  </div>
 </section>
 
 <footer>
@@ -197,6 +313,13 @@ footer {
 </footer>
 
 <a href="https://lin.ee/xUmAtVC" class="line-fixed">LINE予約</a>
+
+<script>
+function toggle(el){
+  const answer = el.querySelector(".faq-answer");
+  answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
