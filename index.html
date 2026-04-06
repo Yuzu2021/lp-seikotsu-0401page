@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   line-height: 1.6;
-  overflow-x: hidden; /* 横ズレ防止 */
+  overflow-x: hidden;
 }
 
 /* ヘッダー */
@@ -33,7 +33,7 @@ header h1 {
   font-size: 18px;
 }
 
-/* インスタアイコン */
+/* インスタ */
 .insta-header {
   width: 28px;
 }
@@ -74,7 +74,7 @@ nav a {
   font-size: 20px;
 }
 
-/* ←ここに追加グレーにしたコード */
+/* 院長グレー */
 #about {
   background: #f5f5f5;
 }
@@ -87,7 +87,7 @@ nav a {
   gap: 15px;
 }
 
-/* ボタン共通 */
+/* ボタン */
 .menu-btn {
   width: 90%;
   max-width: 320px;
@@ -102,13 +102,8 @@ nav a {
   position: relative;
 }
 
-.menu-btn:hover {
-  transform: scale(1.05);
-}
-
-.menu-btn:active {
-  transform: scale(0.97);
-}
+.menu-btn:hover { transform: scale(1.05); }
+.menu-btn:active { transform: scale(0.97); }
 
 /* ラベル */
 .label {
@@ -123,7 +118,7 @@ nav a {
   font-weight: bold;
 }
 
-/* 個別カラー */
+/* カラー */
 .hoken { background: #007bff; }
 .jihi { background: #ff6600; }
 .jiko { background: #e60023; }
@@ -146,7 +141,7 @@ img {
   width: 100%;
   max-width: 350px;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 /* CTA */
@@ -202,8 +197,6 @@ footer {
 <nav>
   <a href="#about">👨‍⚕️院長紹介</a>
   <a href="#menu">❤️‍🩹施術</a>
-  <a href="#access">🚕アクセス</a>
-  <a href="#faq">🙋Q&A</a>
 </nav>
 
 <!-- トップ -->
@@ -212,11 +205,9 @@ footer {
   <a href="https://lin.ee/xUmAtVC" class="cta">LINE予約する</a>
 </section>
 
-<!-- 当院 -->
+<!-- 院長紹介 -->
 <section id="about" class="section">
   <h2>【院長の紹介】</h2>
-  <img src="intyo.jpg">
-  <img src="5.jpg">
   <p>一人ひとりに合わせた施術で根本改善を目指します。</p>
 </section>
 
@@ -226,7 +217,6 @@ footer {
   <h2>☝️タップで料金が見れます</h2>
 
   <div class="flex">
-
     <a href="https://yuzu2021.github.io/hokensejyutu-ryoukin/" class="menu-btn hoken">
       <div class="label">✨よく選ばれています✨</div>
       <h3>保険施術</h3>
@@ -242,13 +232,16 @@ footer {
       <h3>交通事故治療</h3>
       <p>※自己負担0円となる場合があります</p>
     </a>
-
   </div>
 
   <p class="note">
   ※症状や施術内容により異なります。<br>
   ※交通事故治療は保険適用条件により自己負担が発生する場合があります。
   </p>
+
+  <!-- ★ここに移動 -->
+  <img src="intyo.jpg">
+  <img src="5.jpg">
 
 </section>
 
@@ -257,13 +250,6 @@ footer {
 </footer>
 
 <a href="https://lin.ee/xUmAtVC" class="line-fixed">LINE予約</a>
-
-<script>
-function toggle(el){
-  const answer = el.querySelector(".faq-answer");
-  answer.style.display = answer.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
