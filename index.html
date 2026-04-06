@@ -27,7 +27,6 @@ header h1 {
   font-size: 18px;
 }
 
-/* インスタアイコン */
 .insta-header {
   width: 28px;
 }
@@ -98,7 +97,6 @@ nav a {
   transform: scale(0.97);
 }
 
-/* ラベル */
 .label {
   position: absolute;
   top: -10px;
@@ -111,7 +109,6 @@ nav a {
   font-weight: bold;
 }
 
-/* カラー */
 .hoken { background: #007bff; }
 .jihi { background: #ff6600; }
 .jiko { background: #e60023; }
@@ -122,14 +119,12 @@ nav a {
   font-size: 14px;
 }
 
-/* 注意書き */
 .note {
   font-size: 12px;
   color: #666;
   margin-top: 20px;
 }
 
-/* 画像 */
 img {
   width: 100%;
   max-width: 350px;
@@ -137,7 +132,6 @@ img {
   margin-top: 10px;
 }
 
-/* CTA */
 .cta {
   background: #ff6600;
   color: #fff;
@@ -190,34 +184,42 @@ footer {
   padding: 20px;
 }
 
-/* インスタボタン（フッター用） */
-.insta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.insta-btn img {
-  width: 20px;
-}
-
-/* 固定LINE */
-.line-fixed {
+/* 固定ボタン共通 */
+.fixed-btn {
   position: fixed;
   bottom: 20px;
-  right: 15px;
-  background: #06C755;
-  color: #fff;
   padding: 15px 18px;
   border-radius: 50px;
   text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: bounce 1.5s infinite;
+}
+
+.fixed-btn img {
+  width: 20px;
+}
+
+/* LINE */
+.line-fixed {
+  right: 15px;
+  background: #06C755;
+}
+
+/* Instagram */
+.insta-fixed {
+  left: 15px;
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+
+/* アニメーション */
+@keyframes bounce {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
 }
 
 /* PC */
@@ -234,7 +236,7 @@ footer {
 
 <header>
   <h1>🏥にしむら整骨院🏥</h1>
-  <a href="https://www.instagram.com/gym_seikotuin?igsh=MWFjY2JqYnJ4ZDRjMw%3D%3D&utm_source=qr">
+  <a href="https://www.instagram.com/gym_seikotuin">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="insta-header">
   </a>
 </header>
@@ -279,67 +281,44 @@ footer {
       <p>※自己負担0円となる場合があります</p>
     </a>
   </div>
-
-  <p class="note">
-  ※症状や施術内容により異なります。<br>
-  ※交通事故治療は保険適用条件により自己負担が発生する場合があります。
-  </p>
 </section>
 
 <section id="access" class="section">
   <h2>アクセス</h2>
   <p>熊本市南区御幸笛田4-4-75</p>
 
-  <a href="https://maps.app.goo.gl/C2bwAdXybJHKL8Ef6?g_st=ic">
+  <a href="https://maps.app.goo.gl/C2bwAdXybJHKL8Ef6">
     <div class="map">
       <iframe src="https://www.google.com/maps?q=熊本市南区御幸笛田4-4-75&output=embed"></iframe>
     </div>
   </a>
-
-  <p>マックスバリュから徒歩1分</p>
 </section>
 
-<!-- Q&A -->
 <section id="faq" class="section">
   <h2>よくある質問</h2>
 
   <div class="faq">
-
     <div class="faq-item" onclick="toggle(this)">
       <div class="faq-question">施術は痛くない？ <span>＋</span></div>
       <div class="faq-answer">無理な施術は行いませんのでご安心ください。</div>
     </div>
-
-    <div class="faq-item" onclick="toggle(this)">
-      <div class="faq-question">どのくらい時間がかかる？ <span>＋</span></div>
-      <div class="faq-answer">初回は50〜60分ほどです。2回目以降は30〜40分お時間を頂いております。</div>
-    </div>
-
-    <div class="faq-item" onclick="toggle(this)">
-      <div class="faq-question">予約は必要？ <span>＋</span></div>
-      <div class="faq-answer">予約無しでもOKですが、予約優先なのでLINE予約がおすすめです。</div>
-    </div>
-
-    <div class="faq-item" onclick="toggle(this)">
-      <div class="faq-question">駐車場はある？ <span>＋</span></div>
-      <div class="faq-answer">駐車場６台完備しております。</div>
-    </div>
-
   </div>
 </section>
 
 <footer>
   <p>© にしむら整骨院</p>
-
-  <!-- Instagramボタン -->
-  <a href="https://www.instagram.com/gym_seikotuin?igsh=MWFjY2JqYnJ4ZDRjMw%3D%3D&utm_source=qr" class="insta-btn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-    Instagramを見る
-  </a>
-
 </footer>
 
-<a href="https://lin.ee/xUmAtVC" class="line-fixed">LINE予約</a>
+<!-- 固定Instagram -->
+<a href="https://www.instagram.com/gym_seikotuin" class="fixed-btn insta-fixed">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+  Instagram
+</a>
+
+<!-- 固定LINE -->
+<a href="https://lin.ee/xUmAtVC" class="fixed-btn line-fixed">
+  LINE予約
+</a>
 
 <script>
 function toggle(el){
