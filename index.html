@@ -350,6 +350,13 @@ footer {
 </a>
 
 <script>
+/* ページを開いたとき必ず一番上から表示 */
+history.scrollRestoration = "manual";
+
+window.addEventListener("load", function() {
+  window.scrollTo(0, 0);
+});
+
 function toggle(el){
   const answer = el.querySelector(".faq-answer");
   answer.style.display = answer.style.display === "block" ? "none" : "block";
